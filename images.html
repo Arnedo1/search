@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        body {
+            margin: 0;
+            margin-top:253px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .form-container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .btn-google {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        .btn-google:hover {
+            box-shadow: 0 1px 1px rgba(0,0,0,.1);
+            background-color: #f8f9fa;
+            border: 1px solid #dadce0;
+            color: #202124;
+        }
+        .search-box-container {
+            position: relative;
+        }
+        .search-box {
+            display: flex;
+            z-index: 3;
+            position: relative;
+            min-height: 44px;
+            background: transparent;
+            border: 1px solid #dfe1e5;
+            box-shadow: none;
+            border-radius: 24px;
+            margin: 0 auto;
+            width: 500px;
+            margin-top: 30px;
+            color: #202124;
+            padding: 0 10px;
+            padding-left: 40px;
+            font-size: 15px;
+            top:50%;
+        }
+        .search-box:focus {
+            outline: none;
+            box-shadow: 0 1px 6px rgba(32,33,36,.28);
+            border-color: rgba(223,225,229,0);
+        }
+        .search-box:hover {
+            box-shadow: 0 1px 6px rgba(32,33,36,.28);
+            border-color: rgba(223,225,229,0);
+        }
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            pointer-events: none;
+            transform: translateY(-50%);
+        }
+        .mic-icon {
+            position: absolute;
+            left: 435px;
+            top: 50%;
+            width: 15px;
+            height: 20px;
+            pointer-events: none;
+            transform: translateY(-50%);
+        }
+        .camera-icon {
+            position: absolute;
+            left: 475px;
+            top: 50%;
+            width: 23px;
+            height: 23px;
+            pointer-events: none;
+            transform: translateY(-50%);
+        }
+
+        .loop-icon {
+            position: absolute;
+            left: 515px;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 10; /* Ensure it's above other elements */
+        }
+        .top-nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: transparent;
+            padding: 10px;
+            z-index: 1000;
+            font-size: 13px;
+            font-family: arial, sans-serif;
+            display: flex;
+            align-items: center;
+        }
+        .top-nav a {
+            color: #202124;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .top-nav img {
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+
+        .logo {
+            width:270px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <span class="top-nav-a">
+            <a href="/index.html">Back to google search</a>
+        </span>
+        <span class="top-nav-b">
+            <img src="/Images/images3.png" style="width:25px;" alt="app icon">
+        </span>
+    </div>
+    <div class="form-container">
+        <img class="logo" src="/Images/Google_Images1.png" alt="Google Logo">
+        <form id="searchForm" action="https://www.google.com/search" method="get">
+            <div class="search-box-container">
+                <img src="/Images/magnifying-glass-1976105_640.png" class="search-icon" alt="search icon">
+                <input type="hidden" name="tbm" value="isch">
+                <input class="search-box" type="text" name="q" id="searchInput">
+                <img src="/Images/images4.png" class="mic-icon" alt="mic icon">
+                <img src="/Images/Google-lens.png" class="camera-icon" alt="camera icon">
+                <img src="/Images/blue_loop1.png" class="loop-icon" alt="blue loop icon" id="searchButton">
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchForm = document.getElementById('searchForm');
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+
+            searchButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                if (searchInput.value.trim() !== '') {
+                    searchForm.submit();
+                }
+            });
+
+            searchInput.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    if (searchInput.value.trim() !== '') {
+                        searchForm.submit();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

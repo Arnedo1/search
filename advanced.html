@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color:white;
+        }
+
+        .advanced {
+            color:#d93025;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            margin: 43px 35px 20px 10px;;
+        }
+
+        .word1 {
+            color: #333;
+            font-size: 16px;
+            margin: 40px 0 0 45px;
+            font-family: Arial, sans-serif;
+        }
+
+        .p1 {
+            height: 30px;
+            display: table-cell;
+            vertical-align: middle;
+            margin-top: 10px;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color:#ebebeb;
+            margin-top: 22px;
+        }
+
+        .row-input {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: -4px;
+        }
+
+        .left {
+            width: 180px;
+            margin-top: 5px;
+        }
+
+        .form-input {
+            width: 563px;
+            height: 25px;
+            background-color: transparent;
+            border: 1px solid #d9d9d9;
+            border-top: 1px solid #c0c0c0;
+            color: gray;
+            font-size: 14px;
+            padding: 0 5px;
+        }
+
+        .btn-advanced {
+            box-shadow: none;
+            background-color: #4d90fe;
+            background-image: -webkit-linear-gradient(top, #4d90fe, #4787ed);
+            background-image: -moz-linear-gradient(top, #4d90fe, #4787ed);
+            background-image: -ms-linear-gradient(top, #4d90fe, #4787ed);
+            background-image: -o-linear-gradient(top, #4d90fe, #4787ed);
+            background-image: linear-gradient(top, #4d90fe, #4787ed);
+            border: 1px solid #3079ed;
+            color: #fff;
+            width: 120px;
+            height: 30px;
+            border-radius: 2px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size:11px;
+        }
+
+        .btn-advanced:hover {
+            border-color: #2f5bb7;
+            background-image: -webkit-linear-gradient(top, #4d90fe, #357ae8);
+            background-image: -moz-linear-gradient(top, #4d90fe, #357ae8);
+            background-image: -ms-linear-gradient(top, #4d90fe, #357ae8);
+            background-image: -o-linear-gradient(top, #4d90fe, #357ae8);
+            background-image: linear-gradient(top, #4d90fe, #357ae8);
+        }
+
+        .adv-box {
+            justify-content: flex-left;
+            margin-left: 630px;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .logo {
+            width:70px;
+        }
+
+        .top-nav-b {
+            display: flex;
+            justify-content: flex-end;
+            margin-right:15px;
+        }
+
+        .top-nav {
+            box-sizing: border-box;
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            min-width: min-content;
+        }
+
+        .top-nav-left {
+            margin:20px 0px 0px 20px;
+        }
+
+        .app {
+            height:25px;
+            margin: 15px -5px 0px 0px;
+        }
+
+        .appbar {
+            color: #d93025;
+            font-size: 20px;
+            margin: 25px 35px;
+        }
+
+        .range-input {
+            width: 268px;
+            height: 25px;
+            padding: 1px 8px;
+            background-color: transparent;
+            border: 1px solid #d9d9d9;
+            border-top: 1px solid #c0c0c0;
+            box-sizing: border-box;
+            color: #333;
+            font-size: 13px;
+            margin-right: 10px;
+        }
+
+        .range-text {
+            font-size: 13px;
+            color: #333;
+            margin-right: 10px;
+        }
+        .text {
+            margin-left:20px;
+            width:270px;
+        }
+        .text-right {
+            display: flex;
+            justify-content: flex-end;
+            margin-right:15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <span class="top-nav-left">
+            <a href="/index.html">
+                <img class="logo" src="Images/search.png" alt="Google Logo">
+            </a>
+        </span>
+        <span class="top-nav-b">
+            <img class="app" src="/Images/images3.png" alt="app icon">
+        </span>
+    </div>
+    <div class="appbar">
+        <div class="advanced">Advanced Search</div>
+    </div>
+    <hr>
+    <div class="word1">
+        <div class="row-input">
+            <div>
+                <p class="p1">Find pages with...</p>
+            </div>
+             <div class="text-right">
+                <p style="color:#777; margin-left:630px; font-size:13px;">To do this in the search box.</p>
+            </div>
+        </div>
+        <form action="https://www.google.com/search">
+            <div class="row-input">
+                <div class="left">
+                    <p style="color:#333; font-size:13px;">all these words:</p>
+                </div>
+                <div class="right">
+                    <input type="text" name="as_q" class="form-input">
+                </div>
+                <div class="text">
+                    <p style="color:#555; font-size:11px;">Type the important words: tri-colour rat terrier</p>
+                </div>
+            </div>
+            <div class="row-input">
+                <div class="left">
+                    <p style="color:#333; font-size:13px;">this exact word or phrase:</p>
+                </div>
+                <div class="right">
+                    <input type="text" name="as_epq" class="form-input">
+                </div>
+                <div class="text">
+                    <p style="color:#555; font-size:11px;">Put exact words in quotes: "rat terrier"</p>
+                </div>
+            </div>
+            <div class="row-input">
+                <div class="left">
+                    <p style="color:#333; font-size:13px;">any of these words:</p>
+                </div>
+                <div class="right">
+                    <input type="text" name="as_oq" class="form-input">
+                </div>
+                <div class="text">
+                    <p style="color:#555; font-size:11px;">Type OR between all the words you want: miniature OR standard</p>
+                </div>
+            </div>
+            <div class="row-input">
+                <div class="left">
+                    <p style="color:#333; font-size:13px;">none of these words:</p>
+                </div>
+                <div class="right">
+                    <input type="text" name="as_eq" class="form-input">
+                </div>
+                <div class="text">
+                    <p style="color:#555; font-size:11px;">Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</p>
+                </div>
+            </div>
+            <div class="row-input">
+                <div class="left">
+                    <p style="color:#333; font-size:13px;">numbers ranging from:</p>
+                </div>
+                <div class="right">
+                    <input type="text" name="as_nlo" class="range-input">
+                    <span class="range-text">to</span>
+                    <input type="text" name="as_nhi" class="range-input">
+                </div>
+                <div class="text">
+                    <p style="color:#555; margin-left:-10px; font-size:11px;">Put two full stops between the numbers and add a unit of measurement: 10..35 kg, £300..£500, 2010..2011</p>
+                </div>
+            </div>
+            <hr>
+            <div class="adv-box">
+                <input class="btn-advanced" type="submit" value="Advanced Search">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
